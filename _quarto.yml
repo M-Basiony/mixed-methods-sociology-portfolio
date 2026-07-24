@@ -1,0 +1,37 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - projects.qmd
+    - about.qmd
+    - projects/hate-speech.qmd
+    - projects/survey-machine-learning.qmd
+    - projects/climate-text-analysis.qmd
+    - projects/ict-job-web-scraping.qmd
+
+website:
+  title: "Moustafa Basiony"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: about.qmd
+        text: About
+      - href: Moustafa-Basiony-CV.pdf
+        text: CV
+
+  page-footer:
+    left: "© 2026 Moustafa Basiony"
+    right:
+      - text: "Email"
+        href: "mailto:Moustafa.basiony@outlook.com"
+      - text: "LinkedIn"
+        href: "https://www.linkedin.com/in/moustafa-basiony"
+
+format:
+  html:
+    theme: lux
+    css: styles.css

@@ -1,0 +1,49 @@
+---
+title: "Projects"
+---
+
+The projects below demonstrate how I use quantitative and computational approaches to investigate social and policy-relevant questions. Each page summarizes the research question, data, methods, findings, limitations, and my contribution.
+
+:::: {.projects-grid}
+
+::: {.project-card}
+
+## Detecting Gender-Based Hate Speech on Reddit
+
+I used R, text analysis, and supervised machine learning to classify hate speech in Reddit posts and examine patterns in the detected content.
+
+[View project](projects/hate-speech.qmd)
+
+:::
+
+::: {.project-card}
+
+## Predicting Loneliness from Survey Data
+
+I used PCA, clustering, and machine-learning models to explore survey patterns and evaluate how effectively loneliness could be identified.
+
+[View project](projects/survey-machine-learning.qmd)
+
+:::
+
+::: {.project-card}
+
+## Climate Migration Discourse on Twitter
+
+I analysed 5,482 climate-migration tweets using text cleaning, sentiment analysis, emotion analysis, and topic modelling to uncover the dominant themes shaping the discussion.
+
+[View project](projects/climate-text-analysis.qmd)
+
+:::
+
+::: {.project-card}
+
+## Web Scraping ICT Job Vacancies from Jobat
+
+I helped build a reusable web scraper in R, cleaned the collected vacancy data, and analysed patterns in job locations, contract types, salaries, and categories.
+
+[View project](projects/ict-job-web-scraping.qmd)
+
+:::
+
+::::

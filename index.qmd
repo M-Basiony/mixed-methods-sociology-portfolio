@@ -1,0 +1,53 @@
+---
+title: "Home"
+---
+
+::: {.hero}
+
+# Mixed-Methods Sociology Portfolio
+
+Hello, I’m **Moustafa Basiony**, a mixed-methods sociologist and MSc Sociology candidate at KU Leuven.
+
+I use quantitative, qualitative, and computational methods to study social inequality, migration, discrimination, intergroup relations, education, and wellbeing.
+
+:::
+
+::: {.callout-note}
+
+## Methods at a glance
+
+Survey research · regression analysis · machine learning · computational text analysis · web scraping
+
+:::
+
+## Featured projects
+
+:::: {.projects-grid}
+
+::: {.project-card}
+
+### Detecting Gender-Based Hate Speech on Reddit
+
+I used R, text analysis, and supervised machine learning to classify hate speech in Reddit posts and examine patterns in the detected content.
+
+[View project](projects/hate-speech.qmd)
+
+:::
+
+::: {.project-card}
+
+### Predicting Loneliness from Survey Data
+
+I used PCA, clustering, and machine-learning models to explore survey patterns and evaluate how effectively loneliness could be identified.
+
+[View project](projects/survey-machine-learning.qmd)
+
+:::
+
+::::
+---
+<div class="home-links">
+  <a href="projects.qmd">View all projects</a>
+  <a href="about.qmd">About me</a>
+  <a href="Moustafa-Basiony-CV.pdf">Download my CV</a>
+</div>

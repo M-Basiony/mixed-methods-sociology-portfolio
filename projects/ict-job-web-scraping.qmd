@@ -1,0 +1,48 @@
+---
+title: "Web Scraping ICT Job Vacancies from Jobat"
+---
+
+**Tools and skills:** R · web scraping · rvest · HTTP requests · data cleaning · text analysis · data visualisation
+
+::: {.callout-note}
+
+## At a glance
+
+This project built a reusable and ethical web-scraping workflow in R to collect, clean, and compare vacancy information across several Jobat job categories.
+
+:::
+
+# Project overview
+This project used R to scrape and explore job vacancies published on the Belgian Jobat website. We first collected ICT vacancies, extracting job titles, locations, contract types, and salary information, then extended the same process to several other job categories and combined the results for analysis.
+
+# Research question
+What vacancy information could be collected reliably from Jobat, and what patterns appeared across job categories in job location, contract type, and salary information?
+
+# Data
+The dataset was created by scraping publicly available vacancy listings from Jobat. Each observation represented one job advertisement and included available information such as the job title, category, location, contract type, and salary. ICT vacancies were collected first, followed by vacancies from additional job categories that were combined into one dataset for comparison.
+
+# Methods
+- Sent HTTP requests to Jobat using a descriptive user-agent.
+- Parsed the returned HTML using `rvest`.
+- Identified the HTML elements containing individual vacancy listings.
+- Built a reusable function to extract job titles, locations, contract types, and salary information.
+- Used regular expressions and the position of text elements to separate each variable.
+- Recorded unavailable information as missing values.
+- Scraped multiple result pages and added a ten-second delay between requests.
+- Combined the scraped job categories into one dataset for analysis and visualisation.
+
+# Key findings
+- The scraper successfully converted semi-structured vacancy cards into a structured dataset containing job titles, locations, contract types, salaries, and job categories.
+- Salary information was frequently unavailable, so preserving missing values as `NA` was important for preventing incorrect data from being assigned to another vacancy.
+- Permanent contracts appeared frequently across the scraped listings.
+- The same scraping function could be reused across several job categories and multiple result pages.
+- Parsing each complete vacancy card before extracting individual fields produced more reliable results than scraping each variable separately.
+
+# My contribution
+I helped build and test the web scraper, cleaned and prepared the collected vacancy data, and analysed patterns across job categories. I also contributed to interpreting the results and writing the final report.
+
+# Limitations
+The results depended on the structure and content of the Jobat website at the time of collection. Changes to the website’s HTML could cause the scraper to stop working or extract fields incorrectly. Some vacancy details, especially salary information, were missing, and the scraped listings represented only the vacancies available during the collection period.
+
+# Full project report
+[View the original rendered report](../02-working-files/ict-job-web-scraping-report.html)

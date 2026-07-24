@@ -1,0 +1,87 @@
+---
+title: "About"
+---
+
+
+I am a mixed-methods sociologist and MSc Sociology candidate at KU Leuven. My work combines quantitative, qualitative, and computational approaches to study social inequality, migration, intergroup relations, discrimination, education, and adolescent wellbeing.
+
+I am particularly interested in using survey research and statistical modelling to investigate socially and policy-relevant questions. My experience includes regression analysis, machine learning, text analysis, and web scraping
+
+## Research interests
+
+- Migration and intergroup relations
+- Inter-minority relations
+- Intergroup contact and discrimination
+- Social inequality
+- Adolescent wellbeing
+- Quantitative and mixed-methods research
+
+## Methods and technical skills
+
+<p><strong>Research methods</strong></p>
+
+<div class="skill-tags">
+  <span>Survey research</span>
+  <span>Qualitative research</span>
+  <span>Mixed-methods research design</span>
+  <span>Regression analysis</span>
+  <span>Machine learning</span>
+  <span>Computational text analysis</span>
+</div>
+
+<p><strong>Software</strong></p>
+
+<div class="skill-tags">
+  <span>R</span>
+  <span>Stata</span>
+  <span>SPSS</span>
+  <span>Python</span>
+  <span>Java</span>
+</div>
+
+<p><strong>Languages</strong></p>
+
+<div class="skill-tags">
+  <span>English (fluent)</span>
+  <span>Arabic (fluent)</span>
+  <span>Spanish (intermediate)</span>
+  <span>German (intermediate)</span>
+</div>
+
+## Education
+
+**MSc Sociology, Culture and Society**  
+KU Leuven, expected September 2026
+
+My master’s thesis examines intergroup contact, perceived discrimination, and the acceptance of discrimination among adolescents.
+
+**BA Sociology, Minor in Cognitive Science**  
+Rutgers University–New Brunswick, 2024  
+GPA: 4.0, Summa Cum Laude
+
+## Research experience
+
+**Aresty Research Assistant, Rutgers University New-Brunswick, NJ, USA**  
+September 2023 to May 2024
+
+I designed and carried out independent research projects, conducted statistical analysis using Stata and SPSS, completed literature reviews, and contributed to academic papers and research reports.
+
+**Editorial Assistant Intern, Rutgers University Press, NJ, USA**  
+September 2023 to January 2024
+
+I proofread manuscripts, supported editorial workflows, and coordinated materials between authors, editors, and production teams.
+
+## Current manuscripts
+
+**Manuscripts in preparation for submission in 2026**
+
+- *The Sounds From Under the Stairs: Mahraganat, Class, and Cultural Legitimacy.*
+- *Acceptance of Ethnic and Religious Discrimination among Belgian Adolescents: The Role of Intergroup Contact, Migrant Background, and Discrimination Experiences.*
+
+## Contact
+
+Email: [Moustafa.basiony@outlook.com](mailto:Moustafa.basiony@outlook.com)
+
+LinkedIn: [linkedin.com/in/moustafa-basiony](https://www.linkedin.com/in/moustafa-basiony)
+
+[Download my CV](Moustafa-Basiony-CV.pdf)

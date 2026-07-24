@@ -1,0 +1,9 @@
+_site/
+.quarto/
+.Rproj.user/
+.Rhistory
+.RData
+
+01-original-projects/
+02-working-files/*.Rmd
+02-working-files/*.rmd
