@@ -139,8 +139,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The projects below demonstrate how I use quantitative and computational approaches to investigate social and policy-relevant questions. Each page summarizes the research question, data, methods, findings, limitations, and my contribution.</p>
+<p>The projects below demonstrate how I use quantitative and computational approaches to investigate social inequality, discrimination, migration, and other policy-relevant questions. Each page summarizes the research question, data, methods, findings, limitations, and my contribution.</p>
 <div class="projects-grid">
+<section id="masters-thesis-ethnic-and-religious-discrimination-among-adolescents" class="level2 project-card">
+<h2 class="anchored" data-anchor-id="masters-thesis-ethnic-and-religious-discrimination-among-adolescents">Master’s Thesis: Ethnic and Religious Discrimination among Adolescents</h2>
+<p>I conducted an independent quantitative study of adolescents in Dutch-language Belgian secondary schools, examining how intergroup contact, perceived and vicarious discrimination, and migrant background relate to acceptance of ethnic and religious discrimination.</p>
+<p><a href="./projects/thesis-discrimination.html">View project</a></p>
+</section>
 <section id="detecting-gender-based-hate-speech-on-reddit" class="level2 project-card">
 <h2 class="anchored" data-anchor-id="detecting-gender-based-hate-speech-on-reddit">Detecting Gender-Based Hate Speech on Reddit</h2>
 <p>I used R, text analysis, and supervised machine learning to classify hate speech in Reddit posts and examine patterns in the detected content.</p>
@@ -238,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/M-Basiony\.github\.io\/mixed-methods-sociology-portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

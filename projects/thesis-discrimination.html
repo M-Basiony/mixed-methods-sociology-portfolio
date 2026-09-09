@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Climate Migration Discourse on Twitter – Moustafa Basiony</title>
+<title>Acceptance of Ethnic and Religious Discrimination among Adolescents – Moustafa Basiony</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,7 +122,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Climate Migration Discourse on Twitter</h1>
+<h1 class="title">Acceptance of Ethnic and Religious Discrimination among Adolescents</h1>
+<p class="subtitle lead">Master’s Thesis | KU Leuven</p>
 </div>
 
 
@@ -139,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Tools and skills:</strong> R · text cleaning · sentiment analysis · VADER · NRC emotions · topic modelling · data visualisation</p>
+<p><strong>Tools and skills:</strong> R · survey research · binary logistic regression · ordinal regression · interaction analysis · model comparison · diagnostics · sensitivity analysis · reproducible workflows</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -150,74 +151,190 @@ At a glance
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The project analysed <strong>5,482 climate-migration tweets</strong> using sentiment analysis, emotion analysis, and topic modelling. Four broad themes were identified, while average sentiment remained mostly negative across the study period.</p>
+<p>More frequent intergroup contact was consistently associated with <strong>lower acceptance of ethnic and religious discrimination</strong>, while adolescents who reported witnessing discrimination against others had <strong>higher odds of expressing some acceptance</strong> in both domains.</p>
 </div>
 </div>
 <section id="project-overview" class="level1">
 <h1>Project overview</h1>
-<p>This project analysed how climate migration was discussed on Twitter using quantitative text analysis. We cleaned and explored the tweet corpus, examined hashtags and word associations, tracked sentiment and emotions over time, and used topic modelling to identify the main themes within the conversation.</p>
+<p>This master’s thesis examined how intergroup contact, discrimination experiences, and migrant background relate to adolescents’ acceptance of ethnic and religious discrimination in Dutch-language Belgian secondary schools.</p>
+<p>Rather than treating discrimination as a single construct, I analysed <strong>ethnic and religious discrimination separately</strong>. The study also distinguished between <strong>perceived discrimination</strong>, <strong>vicarious discrimination</strong> (witnessing discrimination directed at others), and <strong>migrant background</strong> as different features of adolescents’ intergroup environments.</p>
+<p>The project was an independent secondary analysis conducted under the supervision of <strong>Prof.&nbsp;Dr.&nbsp;David De Coninck</strong> at KU Leuven.</p>
 </section>
 <section id="research-question" class="level1">
 <h1>Research question</h1>
-<p>How was climate migration discussed on Twitter, and what sentiments, emotions, and recurring topics shaped the conversation?</p>
+<p><strong>How are migrant background, discrimination experiences, and intergroup contact associated with adolescents’ acceptance of ethnic and religious discrimination?</strong></p>
+<p>The thesis focuses on the <strong>normative evaluation of discriminatory behaviour</strong>: whether adolescents reject unequal treatment completely or regard some degree of ethnic or religious discrimination as acceptable.</p>
 </section>
 <section id="data" class="level1">
 <h1>Data</h1>
-<p>The dataset contained 5,482 anonymised and synthetic tweets about climate migration. The tweets covered the period from 15 November to 31 December 2019 and were originally drawn from German, Spanish, and Dutch language discussions. The retained variables included the tweet date, original language, and anonymized English text.</p>
+<p>The analysis used survey data from pupils in the third cycle of Dutch-language secondary education in Belgium, primarily adolescents aged 16 to 18.</p>
+<ul>
+<li><strong>762 respondents</strong> remained after the original data-quality screening.</li>
+<li>The primary controlled models used a common complete-case sample of <strong>517 respondents</strong> in each domain.</li>
+<li>Sensitivity analyses excluding mother’s education increased the analytic sample to <strong>601 respondents</strong>.</li>
+<li>Ethnic and religious discrimination were analysed as parallel but distinct domains.</li>
+</ul>
+<p>The survey data were originally collected during school visits between February and April 2025. I re-specified the variables and modelling strategy for the research questions developed in this thesis.</p>
+</section>
+<section id="measures" class="level1">
+<h1>Measures</h1>
+<p>The principal variables were:</p>
+<ul>
+<li><strong>Acceptance of ethnic discrimination</strong></li>
+<li><strong>Acceptance of religious discrimination</strong></li>
+<li><strong>Ethnic and religious intergroup contact</strong></li>
+<li><strong>Perceived ethnic and religious discrimination</strong></li>
+<li><strong>Vicarious discrimination</strong></li>
+<li><strong>Migrant background</strong></li>
+</ul>
+<p>The original acceptance outcomes were measured on seven-point scales. Because responses were strongly concentrated at complete rejection, the primary models distinguished <strong>complete rejection</strong> from <strong>any degree of acceptance</strong>. I retained the original seven-category outcomes for ordinal sensitivity analyses.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/thesis-acceptance-distribution.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Distribution of the original ethnic- and religious-discrimination acceptance outcomes in the primary analytic sample. Scores range from 1, never acceptable, to 7, always acceptable. N = 517 in each domain.</figcaption>
+</figure>
+</div>
 </section>
 <section id="methods" class="level1">
 <h1>Methods</h1>
+<p>I developed the analysis as a reproducible R workflow covering data preparation, variable construction, missing-data assessment, model estimation, diagnostics, sensitivity analysis, and reporting.</p>
+<p>The main analytical strategy included:</p>
 <ul>
-<li>Cleaned the tweet text by removing placeholders, URLs, retweet markers, and duplicate posts.</li>
-<li>Analysed frequently used hashtags and recurring word combinations.</li>
-<li>Applied VADER to classify tweets as positive, negative, or neutral.</li>
-<li>Checked the VADER classifications against a manually labelled sample of tweets.</li>
-<li>Used the NRC lexicon to examine emotions such as fear, anger, trust, and anticipation.</li>
-<li>Applied Latent Dirichlet Allocation to identify recurring topics in the climate-migration discussion.</li>
-<li>Examined how sentiment and emotions changed during the study period.</li>
+<li>Separate binary logistic regression models for ethnic and religious discrimination.</li>
+<li>Sequential model specifications followed by controlled main-effects models.</li>
+<li>Interaction models testing whether the association between intergroup contact and acceptance varied by migrant background, perceived discrimination, or vicarious discrimination.</li>
+<li>Likelihood-ratio tests and AIC for model comparison.</li>
+<li>Odds ratios and 95% confidence intervals for interpretation.</li>
+<li>Predicted probabilities and simple slopes for relevant interaction models.</li>
+<li>Controls for gender, age, mother’s education, and school location.</li>
+</ul>
+<section id="model-diagnostics" class="level2">
+<h2 class="anchored" data-anchor-id="model-diagnostics">Model diagnostics</h2>
+<p>I assessed:</p>
+<ul>
+<li>Multicollinearity using generalized variance inflation factors.</li>
+<li>Functional form by comparing models with and without quadratic terms for continuous predictors.</li>
+<li>Potentially influential observations using Cook’s distance, leverage, and residuals.</li>
+<li>The proportional-odds assumption for the ordinal sensitivity models.</li>
 </ul>
 </section>
-<section id="sentiment-over-time" class="level1">
-<h1>Sentiment over time</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/climate-sentiment-over-time.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Daily mean VADER sentiment for climate-migration tweets from 15 November to 31 December 2019. The shaded ribbon shows the 95% confidence interval.</figcaption>
-</figure>
-</div>
-<p>Average sentiment remained mostly negative throughout the period, although it became less negative during parts of December.</p>
 </section>
-<section id="topic-modelling" class="level1">
-<h1>Topic modelling</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/climate-topic-terms.png" class="img-fluid figure-img" style="width:95.0%"></p>
-<figcaption>Most important terms across the four LDA topics identified in the climate-migration tweets.</figcaption>
-</figure>
-</div>
-<p>The four topics captured distinct parts of the discussion, including urgent climate action, refugee and integration policy, debates about climate migration, and the humanitarian consequences of displacement.</p>
+<section id="main-findings" class="level1">
+<h1>Main findings</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th style="text-align: right;">Ethnic OR [95% CI]</th>
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">Religious OR [95% CI]</th>
+<th style="text-align: right;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intergroup contact</td>
+<td style="text-align: right;"><strong>0.83 [0.73, 0.94]</strong></td>
+<td style="text-align: right;"><strong>.003</strong></td>
+<td style="text-align: right;"><strong>0.83 [0.74, 0.93]</strong></td>
+<td style="text-align: right;"><strong>.002</strong></td>
+</tr>
+<tr class="even">
+<td>Perceived discrimination</td>
+<td style="text-align: right;">0.96 [0.75, 1.21]</td>
+<td style="text-align: right;">.710</td>
+<td style="text-align: right;"><strong>0.75 [0.58, 0.95]</strong></td>
+<td style="text-align: right;"><strong>.023</strong></td>
+</tr>
+<tr class="odd">
+<td>Migrant background</td>
+<td style="text-align: right;">1.06 [0.65, 1.71]</td>
+<td style="text-align: right;">.823</td>
+<td style="text-align: right;">0.87 [0.55, 1.37]</td>
+<td style="text-align: right;">.561</td>
+</tr>
+<tr class="even">
+<td>Vicarious discrimination</td>
+<td style="text-align: right;"><strong>1.98 [1.29, 3.07]</strong></td>
+<td style="text-align: right;"><strong>.002</strong></td>
+<td style="text-align: right;"><strong>1.83 [1.21, 2.80]</strong></td>
+<td style="text-align: right;"><strong>.005</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Primary controlled logistic regression models predicting any acceptance of ethnic and religious discrimination. Models adjust for gender, age, mother’s education, and school location. N = 517 in each domain.</em></p>
+<p>The clearest finding was the consistency of the <strong>intergroup-contact association</strong>. More frequent ethnic contact was associated with lower acceptance of ethnic discrimination, and more frequent religious contact was associated with lower acceptance of religious discrimination.</p>
+<p>A second consistent pattern concerned <strong>vicarious discrimination</strong>. Adolescents who reported witnessing or encountering discrimination directed at others had higher odds of expressing some acceptance of discrimination in both domains.</p>
+<p>Perceived discrimination showed a less consistent pattern. Perceived religious discrimination was associated with lower acceptance of religious discrimination, while perceived ethnic discrimination was not significantly associated with acceptance of ethnic discrimination.</p>
+<p>Migrant background was not significantly associated with either outcome.</p>
 </section>
-<section id="key-findings" class="level1">
-<h1>Key findings</h1>
+<section id="moderation-analyses" class="level1">
+<h1>Moderation analyses</h1>
+<p>The moderation results were limited.</p>
 <ul>
-<li>VADER classified 2,886 tweets as negative, 1,656 as positive, and 940 as neutral.</li>
-<li>Negative sentiment had the largest daily share for most of the period, with peaks in late November and early December. Positive sentiment increased again after approximately 13 December.</li>
-<li>The small neutral category appeared unreliable during manual validation, showing the importance of checking automated sentiment classifications.</li>
-<li>Topic modelling identified four broad themes: urgent calls for climate action, German refugee and integration policy, debate around defining and solving climate-migration issues, and the humanitarian scale of climate displacement.</li>
-<li>Overall, climate migration was discussed as an environmental crisis, humanitarian emergency, policy challenge, and social-justice issue.</li>
+<li>Migrant background did not significantly moderate the relationship between contact and acceptance in either domain.</li>
+<li>Perceived discrimination did not significantly moderate the contact association.</li>
+<li>Vicarious discrimination moderated the contact association only in the ethnic domain.</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/thesis-contact-vicarious-interaction.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Adjusted predicted probability of any acceptance of ethnic discrimination by ethnic intergroup contact and vicarious-discrimination status. Predictions are derived from the primary controlled interaction model, N = 517. Shaded areas represent 95% confidence intervals.</figcaption>
+</figure>
+</div>
+<p>The ethnic contact-by-vicarious-discrimination interaction was statistically significant in the primary model, but the result was modest, close to the conventional significance threshold, and did not appear in the religious domain. I therefore treat it as <strong>tentative rather than established</strong>.</p>
 </section>
-<section id="my-contribution" class="level1">
-<h1>My contribution</h1>
-<p>I contributed to cleaning and preparing the tweet data, carrying out the topic modelling, and interpreting the resulting themes. I also contributed to writing the final report and explaining the main findings.</p>
+<section id="robustness-and-sensitivity-analysis" class="level1">
+<h1>Robustness and sensitivity analysis</h1>
+<p>I used two main sensitivity strategies.</p>
+<p>First, I re-estimated the models without mother’s education, which increased the analytic sample from 517 to 601 respondents. The substantive pattern of the main findings remained similar.</p>
+<p>Second, I re-estimated the analyses using <strong>cumulative-link ordinal models</strong> with the original seven-category acceptance outcomes. These models reproduced the central results:</p>
+<ul>
+<li>Contact remained negatively associated with acceptance in both domains.</li>
+<li>Vicarious discrimination remained positively associated with acceptance in both domains.</li>
+<li>Perceived religious discrimination remained negatively associated with religious-discrimination acceptance.</li>
+<li>Migrant background remained non-significant.</li>
+</ul>
+<p>These checks reduced concern that the principal conclusions were driven by complete-case sample loss or by dichotomising the acceptance outcomes.</p>
+</section>
+<section id="interpretation" class="level1">
+<h1>Interpretation</h1>
+<p>The findings suggest that adolescents’ normative judgments about discrimination are related not only to their social position but also to the intergroup environments they experience.</p>
+<p>The vicarious-discrimination result was particularly important for the questions that emerged from the thesis. Witnessing discrimination might increase awareness of injustice, but repeated exposure in environments where discriminatory behaviour is tolerated could also shape perceptions of what is normal or socially acceptable. The cross-sectional data cannot distinguish between these explanations, making the result a starting point for further research rather than evidence for a specific mechanism.</p>
 </section>
 <section id="limitations" class="level1">
 <h1>Limitations</h1>
-<p>The dataset covered a relatively short period and focused on synthetic and anonymised tweets, so the findings should not be treated as a complete picture of public opinion. Automated sentiment tools can also misclassify sarcasm, context, or ambiguous wording. Topic modelling identifies broad patterns, but interpreting and naming the topics still requires human judgement.</p>
+<p>Several limitations shape how the findings should be interpreted:</p>
+<ul>
+<li>The study is <strong>cross-sectional and observational</strong>, so the estimated relationships cannot establish causal direction.</li>
+<li>The primary models use <strong>complete-case analysis</strong>, which may introduce selection bias if excluded respondents differ systematically from those retained.</li>
+<li>Several constructs rely on relatively broad or single-item measures.</li>
+<li>The measure of vicarious discrimination does not identify the target, type, frequency, severity, or social response surrounding the observed incident.</li>
+<li>Migrant background is represented by a broad binary measure that may conceal meaningful differences in origin, generation, religion, racialisation, and identification.</li>
+<li>School and classroom identifiers were unavailable, so the models could not account for clustering within educational settings.</li>
+<li>The sampling design does not support generalisation to all Belgian adolescents.</li>
+</ul>
 </section>
-<section id="full-project-report" class="level1">
-<h1>Full project report</h1>
-<p><a href="../02-working-files/climate-text-analysis-report.html">View the original rendered report</a></p>
+<section id="future-research" class="level1">
+<h1>Future research</h1>
+<p>The thesis points toward several extensions that could move from documenting associations toward testing mechanisms more directly.</p>
+<p>Longitudinal and experimental designs could help establish temporal ordering and examine whether changes in contact or discrimination experiences precede changes in attitudes. Richer measures of vicarious discrimination could distinguish exposure accompanied by condemnation from exposure that occurs without meaningful sanction. Future data should also retain school and classroom identifiers so that multilevel models can examine how institutional norms, school composition, and responses to discrimination shape individual attitudes.</p>
+<p>More broadly, I am interested in how experiences of unequal treatment are interpreted and how those interpretations shape expectations about fairness, intergroup attitudes, and subsequent responses to institutions.</p>
+</section>
+<section id="my-contribution" class="level1">
+<h1>My contribution</h1>
+<p>This was my independent master’s thesis project. I developed the research question and theoretical framework, re-specified the survey variables for the thesis aims, prepared and analysed the data in R, developed the regression and moderation strategy, conducted the diagnostics and sensitivity analyses, interpreted the findings, and wrote the thesis under faculty supervision.</p>
+</section>
+<section id="full-thesis" class="level1">
+<h1>Full thesis</h1>
+<p><a href="../02-working-files/MastersThesis_MoustafaBasiony.pdf">Download the full master’s thesis</a></p>
 
 
 </section>

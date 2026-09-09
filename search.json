@@ -1,108 +1,52 @@
 [
   {
-    "objectID": "projects/ict-job-web-scraping.html",
-    "href": "projects/ict-job-web-scraping.html",
-    "title": "Web Scraping ICT Job Vacancies from Jobat",
+    "objectID": "projects/thesis-discrimination.html",
+    "href": "projects/thesis-discrimination.html",
+    "title": "Acceptance of Ethnic and Religious Discrimination among Adolescents",
     "section": "",
-    "text": "Tools and skills: R · web scraping · rvest · HTTP requests · data cleaning · text analysis · data visualisation\n\n\n\n\n\n\nAt a glance\n\n\n\nThis project built a reusable and ethical web-scraping workflow in R to collect, clean, and compare vacancy information across several Jobat job categories.\n\n\n\nProject overview\nThis project used R to scrape and explore job vacancies published on the Belgian Jobat website. We first collected ICT vacancies, extracting job titles, locations, contract types, and salary information, then extended the same process to several other job categories and combined the results for analysis.\n\n\nResearch question\nWhat vacancy information could be collected reliably from Jobat, and what patterns appeared across job categories in job location, contract type, and salary information?\n\n\nData\nThe dataset was created by scraping publicly available vacancy listings from Jobat. Each observation represented one job advertisement and included available information such as the job title, category, location, contract type, and salary. ICT vacancies were collected first, followed by vacancies from additional job categories that were combined into one dataset for comparison.\n\n\nMethods\n\nSent HTTP requests to Jobat using a descriptive user-agent.\nParsed the returned HTML using rvest.\nIdentified the HTML elements containing individual vacancy listings.\nBuilt a reusable function to extract job titles, locations, contract types, and salary information.\nUsed regular expressions and the position of text elements to separate each variable.\nRecorded unavailable information as missing values.\nScraped multiple result pages and added a ten-second delay between requests.\nCombined the scraped job categories into one dataset for analysis and visualisation.\n\n\n\nKey findings\n\nThe scraper successfully converted semi-structured vacancy cards into a structured dataset containing job titles, locations, contract types, salaries, and job categories.\nSalary information was frequently unavailable, so preserving missing values as NA was important for preventing incorrect data from being assigned to another vacancy.\nPermanent contracts appeared frequently across the scraped listings.\nThe same scraping function could be reused across several job categories and multiple result pages.\nParsing each complete vacancy card before extracting individual fields produced more reliable results than scraping each variable separately.\n\n\n\nMy contribution\nI helped build and test the web scraper, cleaned and prepared the collected vacancy data, and analysed patterns across job categories. I also contributed to interpreting the results and writing the final report.\n\n\nLimitations\nThe results depended on the structure and content of the Jobat website at the time of collection. Changes to the website’s HTML could cause the scraper to stop working or extract fields incorrectly. Some vacancy details, especially salary information, were missing, and the scraped listings represented only the vacancies available during the collection period.\n\n\nFull project report\nView the original rendered report"
+    "text": "Tools and skills: R · survey research · binary logistic regression · ordinal regression · interaction analysis · model comparison · diagnostics · sensitivity analysis · reproducible workflows"
   },
   {
-    "objectID": "projects/survey-machine-learning.html",
-    "href": "projects/survey-machine-learning.html",
-    "title": "Predicting Loneliness from Survey Data",
+    "objectID": "projects/thesis-discrimination.html#model-diagnostics",
+    "href": "projects/thesis-discrimination.html#model-diagnostics",
+    "title": "Acceptance of Ethnic and Religious Discrimination among Adolescents",
+    "section": "Model diagnostics",
+    "text": "Model diagnostics\nI assessed:\n\nMulticollinearity using generalized variance inflation factors.\nFunctional form by comparing models with and without quadratic terms for continuous predictors.\nPotentially influential observations using Cook’s distance, leverage, and residuals.\nThe proportional-odds assumption for the ordinal sensitivity models."
+  },
+  {
+    "objectID": "projects/climate-text-analysis.html",
+    "href": "projects/climate-text-analysis.html",
+    "title": "Climate Migration Discourse on Twitter",
     "section": "",
-    "text": "Tools and skills: R · data cleaning · exploratory analysis · PCA · clustering · machine learning · model evaluation"
+    "text": "Tools and skills: R · text cleaning · sentiment analysis · VADER · NRC emotions · topic modelling · data visualisation\n\n\n\n\n\n\nAt a glance\n\n\n\nThe project analysed 5,482 climate-migration tweets using sentiment analysis, emotion analysis, and topic modelling. Four broad themes were identified, while average sentiment remained mostly negative across the study period.\n\n\n\nProject overview\nThis project analysed how climate migration was discussed on Twitter using quantitative text analysis. We cleaned and explored the tweet corpus, examined hashtags and word associations, tracked sentiment and emotions over time, and used topic modelling to identify the main themes within the conversation.\n\n\nResearch question\nHow was climate migration discussed on Twitter, and what sentiments, emotions, and recurring topics shaped the conversation?\n\n\nData\nThe dataset contained 5,482 anonymised and synthetic tweets about climate migration. The tweets covered the period from 15 November to 31 December 2019 and were originally drawn from German, Spanish, and Dutch language discussions. The retained variables included the tweet date, original language, and anonymized English text.\n\n\nMethods\n\nCleaned the tweet text by removing placeholders, URLs, retweet markers, and duplicate posts.\nAnalysed frequently used hashtags and recurring word combinations.\nApplied VADER to classify tweets as positive, negative, or neutral.\nChecked the VADER classifications against a manually labelled sample of tweets.\nUsed the NRC lexicon to examine emotions such as fear, anger, trust, and anticipation.\nApplied Latent Dirichlet Allocation to identify recurring topics in the climate-migration discussion.\nExamined how sentiment and emotions changed during the study period.\n\n\n\nSentiment over time\n\n\n\nDaily mean VADER sentiment for climate-migration tweets from 15 November to 31 December 2019. The shaded ribbon shows the 95% confidence interval.\n\n\nAverage sentiment remained mostly negative throughout the period, although it became less negative during parts of December.\n\n\nTopic modelling\n\n\n\nMost important terms across the four LDA topics identified in the climate-migration tweets.\n\n\nThe four topics captured distinct parts of the discussion, including urgent climate action, refugee and integration policy, debates about climate migration, and the humanitarian consequences of displacement.\n\n\nKey findings\n\nVADER classified 2,886 tweets as negative, 1,656 as positive, and 940 as neutral.\nNegative sentiment had the largest daily share for most of the period, with peaks in late November and early December. Positive sentiment increased again after approximately 13 December.\nThe small neutral category appeared unreliable during manual validation, showing the importance of checking automated sentiment classifications.\nTopic modelling identified four broad themes: urgent calls for climate action, German refugee and integration policy, debate around defining and solving climate-migration issues, and the humanitarian scale of climate displacement.\nOverall, climate migration was discussed as an environmental crisis, humanitarian emergency, policy challenge, and social-justice issue.\n\n\n\nMy contribution\nI contributed to cleaning and preparing the tweet data, carrying out the topic modelling, and interpreting the resulting themes. I also contributed to writing the final report and explaining the main findings.\n\n\nLimitations\nThe dataset covered a relatively short period and focused on synthetic and anonymised tweets, so the findings should not be treated as a complete picture of public opinion. Automated sentiment tools can also misclassify sarcasm, context, or ambiguous wording. Topic modelling identifies broad patterns, but interpreting and naming the topics still requires human judgement.\n\n\nFull project report\nView the original rendered report"
   },
   {
-    "objectID": "projects/survey-machine-learning.html#principal-component-analysis",
-    "href": "projects/survey-machine-learning.html#principal-component-analysis",
-    "title": "Predicting Loneliness from Survey Data",
-    "section": "Principal component analysis",
-    "text": "Principal component analysis\n\n\n\nScree plot showing the variance explained by each principal component. Three components were retained."
-  },
-  {
-    "objectID": "projects/survey-machine-learning.html#cluster-analysis",
-    "href": "projects/survey-machine-learning.html#cluster-analysis",
-    "title": "Predicting Loneliness from Survey Data",
-    "section": "Cluster analysis",
-    "text": "Cluster analysis\n\n\n\nThree-cluster solution across the first two principal-component dimensions."
-  },
-  {
-    "objectID": "projects/survey-machine-learning.html#model-comparison",
-    "href": "projects/survey-machine-learning.html#model-comparison",
-    "title": "Predicting Loneliness from Survey Data",
-    "section": "Model comparison",
-    "text": "Model comparison\n\n\n\nModel\nAccuracy\nRecall\nCohen’s kappa\n\n\n\n\nRandom Forest\n72.4%\n21.2%\n0.209\n\n\nLogistic Regression\n71.7%\n27.8%\n0.229\n\n\nNaive Bayes\n68.9%\n38.8%\n0.228\n\n\n\nRandom Forest achieved the highest accuracy, but Naive Bayes identified a substantially larger proportion of respondents experiencing loneliness. Because missing lonely respondents was considered more serious than generating false positives, recall was prioritised when selecting and tuning the final model."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "projects/hate-speech.html",
+    "href": "projects/hate-speech.html",
+    "title": "Detecting Gender-Based Hate Speech on Reddit",
     "section": "",
-    "text": "I am a mixed-methods sociologist and MSc Sociology candidate at KU Leuven. My work combines quantitative, qualitative, and computational approaches to study social inequality, migration, intergroup relations, discrimination, education, and adolescent wellbeing.\nI am particularly interested in using survey research and statistical modelling to investigate socially and policy-relevant questions. My experience includes regression analysis, machine learning, text analysis, and web scraping"
+    "text": "Tools and skills: R · data cleaning · manual annotation · text analysis · machine learning · model evaluation · topic modelling"
   },
   {
-    "objectID": "about.html#research-interests",
-    "href": "about.html#research-interests",
-    "title": "About",
-    "section": "Research interests",
-    "text": "Research interests\n\nMigration and intergroup relations\nInter-minority relations\nIntergroup contact and discrimination\nSocial inequality\nAdolescent wellbeing\nQuantitative and mixed-methods research"
-  },
-  {
-    "objectID": "about.html#methods-and-technical-skills",
-    "href": "about.html#methods-and-technical-skills",
-    "title": "About",
-    "section": "Methods and technical skills",
-    "text": "Methods and technical skills\n\nResearch methods\n\n\nSurvey research Qualitative research Mixed-methods research design Regression analysis Machine learning Computational text analysis\n\n\nSoftware\n\n\nR Stata SPSS Python Java\n\n\nLanguages\n\n\nEnglish (fluent) Arabic (fluent) Spanish (intermediate) German (intermediate)"
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About",
-    "section": "Education",
-    "text": "Education\nMSc Sociology, Culture and Society\nKU Leuven, expected September 2026\nMy master’s thesis examines intergroup contact, perceived discrimination, and the acceptance of discrimination among adolescents.\nBA Sociology, Minor in Cognitive Science\nRutgers University–New Brunswick, 2024\nGPA: 4.0, Summa Cum Laude"
-  },
-  {
-    "objectID": "about.html#research-experience",
-    "href": "about.html#research-experience",
-    "title": "About",
-    "section": "Research experience",
-    "text": "Research experience\nAresty Research Assistant, Rutgers University New-Brunswick, NJ, USA\nSeptember 2023 to May 2024\nI designed and carried out independent research projects, conducted statistical analysis using Stata and SPSS, completed literature reviews, and contributed to academic papers and research reports.\nEditorial Assistant Intern, Rutgers University Press, NJ, USA\nSeptember 2023 to January 2024\nI proofread manuscripts, supported editorial workflows, and coordinated materials between authors, editors, and production teams."
-  },
-  {
-    "objectID": "about.html#current-manuscripts",
-    "href": "about.html#current-manuscripts",
-    "title": "About",
-    "section": "Current manuscripts",
-    "text": "Current manuscripts\nManuscripts in preparation for submission in 2026\n\nThe Sounds From Under the Stairs: Mahraganat, Class, and Cultural Legitimacy.\nAcceptance of Ethnic and Religious Discrimination among Belgian Adolescents: The Role of Intergroup Contact, Migrant Background, and Discrimination Experiences."
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About",
-    "section": "Contact",
-    "text": "Contact\nEmail: Moustafa.basiony@outlook.com\nLinkedIn: linkedin.com/in/moustafa-basiony\nDownload my CV"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "Hello, I’m Moustafa Basiony, a mixed-methods sociologist and MSc Sociology candidate at KU Leuven.\nI use quantitative, qualitative, and computational methods to study social inequality, migration, discrimination, intergroup relations, education, and wellbeing."
-  },
-  {
-    "objectID": "index.html#featured-projects",
-    "href": "index.html#featured-projects",
-    "title": "Home",
-    "section": "Featured projects",
-    "text": "Featured projects\n\n\nDetecting Gender-Based Hate Speech on Reddit\nI used R, text analysis, and supervised machine learning to classify hate speech in Reddit posts and examine patterns in the detected content.\nView project\n\n\nPredicting Loneliness from Survey Data\nI used PCA, clustering, and machine-learning models to explore survey patterns and evaluate how effectively loneliness could be identified.\nView project\n\n\n\n\nView all projects About me Download my CV"
+    "objectID": "projects/hate-speech.html#model-performance",
+    "href": "projects/hate-speech.html#model-performance",
+    "title": "Detecting Gender-Based Hate Speech on Reddit",
+    "section": "Model performance",
+    "text": "Model performance\n\n\n\nROC curve for the selected hate-speech classifier. The model achieved an AUC of 0.755."
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "The projects below demonstrate how I use quantitative and computational approaches to investigate social and policy-relevant questions. Each page summarizes the research question, data, methods, findings, limitations, and my contribution."
+    "text": "The projects below demonstrate how I use quantitative and computational approaches to investigate social inequality, discrimination, migration, and other policy-relevant questions. Each page summarizes the research question, data, methods, findings, limitations, and my contribution."
+  },
+  {
+    "objectID": "projects.html#masters-thesis-ethnic-and-religious-discrimination-among-adolescents",
+    "href": "projects.html#masters-thesis-ethnic-and-religious-discrimination-among-adolescents",
+    "title": "Projects",
+    "section": "Master’s Thesis: Ethnic and Religious Discrimination among Adolescents",
+    "text": "Master’s Thesis: Ethnic and Religious Discrimination among Adolescents\nI conducted an independent quantitative study of adolescents in Dutch-language Belgian secondary schools, examining how intergroup contact, perceived and vicarious discrimination, and migrant background relate to acceptance of ethnic and religious discrimination.\nView project"
   },
   {
     "objectID": "projects.html#detecting-gender-based-hate-speech-on-reddit",
@@ -133,24 +77,101 @@
     "text": "Web Scraping ICT Job Vacancies from Jobat\nI helped build a reusable web scraper in R, cleaned the collected vacancy data, and analysed patterns in job locations, contract types, salaries, and categories.\nView project"
   },
   {
-    "objectID": "projects/hate-speech.html",
-    "href": "projects/hate-speech.html",
-    "title": "Detecting Gender-Based Hate Speech on Reddit",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
     "section": "",
-    "text": "Tools and skills: R · data cleaning · manual annotation · text analysis · machine learning · model evaluation · topic modelling"
+    "text": "Hello, I’m Moustafa Basiony, a quantitative sociologist and mixed-methods researcher who recently completed an MSc in Sociology, Culture and Society at KU Leuven.\nMy research focuses on discrimination, social inequality, migration, and intergroup relations. I use survey research, statistical modelling, and computational methods to study how social experiences and contexts shape attitudes, inequalities, and intergroup relations."
   },
   {
-    "objectID": "projects/hate-speech.html#model-performance",
-    "href": "projects/hate-speech.html#model-performance",
-    "title": "Detecting Gender-Based Hate Speech on Reddit",
-    "section": "Model performance",
-    "text": "Model performance\n\n\n\nROC curve for the selected hate-speech classifier. The model achieved an AUC of 0.755."
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Home",
+    "section": "Featured projects",
+    "text": "Featured projects\n\n\nMaster’s Thesis: Acceptance of Ethnic and Religious Discrimination among Adolescents\nI conducted an independent quantitative study using survey data from 762 students in Dutch-language Belgian secondary schools to examine how intergroup contact, perceived and vicarious discrimination, and migrant background relate to acceptance of ethnic and religious discrimination.\nView project\n\n\nDetecting Gender-Based Hate Speech on Reddit\nI used R, text analysis, and supervised machine learning to classify hate speech in Reddit posts and examine patterns in the detected content.\nView project\n\n\nPredicting Loneliness from Survey Data\nI used PCA, clustering, and machine-learning models to explore survey patterns and evaluate how effectively loneliness could be identified.\nView project\n\n\n\n\nView all projects About me Download my CV"
   },
   {
-    "objectID": "projects/climate-text-analysis.html",
-    "href": "projects/climate-text-analysis.html",
-    "title": "Climate Migration Discourse on Twitter",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Tools and skills: R · text cleaning · sentiment analysis · VADER · NRC emotions · topic modelling · data visualisation\n\n\n\n\n\n\nAt a glance\n\n\n\nThe project analysed 5,482 climate-migration tweets using sentiment analysis, emotion analysis, and topic modelling. Four broad themes were identified, while average sentiment remained mostly negative across the study period.\n\n\n\nProject overview\nThis project analysed how climate migration was discussed on Twitter using quantitative text analysis. We cleaned and explored the tweet corpus, examined hashtags and word associations, tracked sentiment and emotions over time, and used topic modelling to identify the main themes within the conversation.\n\n\nResearch question\nHow was climate migration discussed on Twitter, and what sentiments, emotions, and recurring topics shaped the conversation?\n\n\nData\nThe dataset contained 5,482 anonymised and synthetic tweets about climate migration. The tweets covered the period from 15 November to 31 December 2019 and were originally drawn from German, Spanish, and Dutch language discussions. The retained variables included the tweet date, original language, and anonymized English text.\n\n\nMethods\n\nCleaned the tweet text by removing placeholders, URLs, retweet markers, and duplicate posts.\nAnalysed frequently used hashtags and recurring word combinations.\nApplied VADER to classify tweets as positive, negative, or neutral.\nChecked the VADER classifications against a manually labelled sample of tweets.\nUsed the NRC lexicon to examine emotions such as fear, anger, trust, and anticipation.\nApplied Latent Dirichlet Allocation to identify recurring topics in the climate-migration discussion.\nExamined how sentiment and emotions changed during the study period.\n\n\n\nSentiment over time\n\n\n\nDaily mean VADER sentiment for climate-migration tweets from 15 November to 31 December 2019. The shaded ribbon shows the 95% confidence interval.\n\n\nAverage sentiment remained mostly negative throughout the period, although it became less negative during parts of December.\n\n\nTopic modelling\n\n\n\nMost important terms across the four LDA topics identified in the climate-migration tweets.\n\n\nThe four topics captured distinct parts of the discussion, including urgent climate action, refugee and integration policy, debates about climate migration, and the humanitarian consequences of displacement.\n\n\nKey findings\n\nVADER classified 2,886 tweets as negative, 1,656 as positive, and 940 as neutral.\nNegative sentiment had the largest daily share for most of the period, with peaks in late November and early December. Positive sentiment increased again after approximately 13 December.\nThe small neutral category appeared unreliable during manual validation, showing the importance of checking automated sentiment classifications.\nTopic modelling identified four broad themes: urgent calls for climate action, German refugee and integration policy, debate around defining and solving climate-migration issues, and the humanitarian scale of climate displacement.\nOverall, climate migration was discussed as an environmental crisis, humanitarian emergency, policy challenge, and social-justice issue.\n\n\n\nMy contribution\nI contributed to cleaning and preparing the tweet data, carrying out the topic modelling, and interpreting the resulting themes. I also contributed to writing the final report and explaining the main findings.\n\n\nLimitations\nThe dataset covered a relatively short period and focused on synthetic and anonymised tweets, so the findings should not be treated as a complete picture of public opinion. Automated sentiment tools can also misclassify sarcasm, context, or ambiguous wording. Topic modelling identifies broad patterns, but interpreting and naming the topics still requires human judgement.\n\n\nFull project report\nView the original rendered report"
+    "text": "I am a quantitative sociologist and mixed-methods researcher who recently completed an MSc in Sociology, Culture and Society at KU Leuven. My research focuses on discrimination, social inequality, migration, and intergroup relations, with particular interest in how social experiences and institutional contexts shape attitudes and unequal outcomes.\nMy work combines survey research and statistical modelling with computational and qualitative approaches. In my master’s thesis, I used logistic and ordinal regression, interaction analysis, model diagnostics, and sensitivity analyses to examine adolescents’ acceptance of ethnic and religious discrimination. My other projects have involved machine learning, computational text analysis, clustering, and web scraping."
+  },
+  {
+    "objectID": "about.html#research-interests",
+    "href": "about.html#research-interests",
+    "title": "About",
+    "section": "Research interests",
+    "text": "Research interests\n\nDiscrimination and social inequality\nIntergroup contact and relations\nMigration and migrant incorporation\nAttitudes, norms, and perceptions of fairness\nQuantitative and mixed-methods research"
+  },
+  {
+    "objectID": "about.html#methods-and-technical-skills",
+    "href": "about.html#methods-and-technical-skills",
+    "title": "About",
+    "section": "Methods and technical skills",
+    "text": "Methods and technical skills\n\nApplied quantitative methods\n\n\nSurvey research Binary logistic regression Ordinal regression Interaction & moderation analysis Model comparison Model diagnostics Sensitivity analysis Missing-data assessment Principal component analysis Clustering Supervised machine learning Model evaluation\n\n\nComputational and qualitative methods\n\n\nReproducible R workflows Computational text analysis Topic modelling Sentiment analysis Web scraping Regular expressions Qualitative research Mixed-methods research design\n\n\nAdditional methodological training\n\nCoursework has included multilevel modelling, regression discontinuity designs, difference-in-differences, and experimental methods and design. I have also developed broader familiarity with structural equation modelling and Bayesian statistics through self-study.\n\nSoftware\n\n\nR (primary) Stata SPSS Python Java\n\n\nLanguages\n\n\nEnglish (fluent) Arabic (fluent) Spanish (intermediate) German (intermediate)"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\nMSc Sociology, Culture and Society\nKU Leuven, 2026\nMy master’s thesis, Acceptance of Ethnic and Religious Discrimination among Adolescents, examined how intergroup contact, perceived and vicarious discrimination, and migrant background relate to adolescents’ acceptance of ethnic and religious discrimination.\nView thesis project\nBA Sociology, Minor in Cognitive Science\nRutgers University–New Brunswick, 2024\nGPA: 4.0, Summa Cum Laude"
+  },
+  {
+    "objectID": "about.html#research-experience",
+    "href": "about.html#research-experience",
+    "title": "About",
+    "section": "Research experience",
+    "text": "Research experience\nAresty Research Assistant, Rutgers University–New Brunswick, NJ, USA\nSeptember 2023 to May 2024\nI contributed to collaborative research on social and behavioural outcomes among children and adolescents, conducting statistical analysis using Stata and SPSS, reviewing literature, interpreting findings, and contributing to research reports and academic outputs.\nEditorial Assistant Intern, Rutgers University Press, NJ, USA\nSeptember 2023 to January 2024\nI proofread academic manuscripts and supported editorial and production workflows involving authors, editors, and production staff."
+  },
+  {
+    "objectID": "about.html#current-manuscripts",
+    "href": "about.html#current-manuscripts",
+    "title": "About",
+    "section": "Current manuscripts",
+    "text": "Current manuscripts\nManuscripts in preparation\n\nAcceptance of Ethnic and Religious Discrimination among Belgian Adolescents: The Role of Intergroup Contact, Migrant Background, and Discrimination Experiences.\nThe Sounds From Under the Stairs: Mahraganat, Class, and Cultural Legitimacy."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\nEmail: Moustafa.basiony@outlook.com\nLinkedIn: linkedin.com/in/moustafa-basiony\nDownload my CV"
+  },
+  {
+    "objectID": "projects/survey-machine-learning.html",
+    "href": "projects/survey-machine-learning.html",
+    "title": "Predicting Loneliness from Survey Data",
+    "section": "",
+    "text": "Tools and skills: R · data cleaning · exploratory analysis · PCA · clustering · machine learning · model evaluation"
+  },
+  {
+    "objectID": "projects/survey-machine-learning.html#principal-component-analysis",
+    "href": "projects/survey-machine-learning.html#principal-component-analysis",
+    "title": "Predicting Loneliness from Survey Data",
+    "section": "Principal component analysis",
+    "text": "Principal component analysis\n\n\n\nScree plot showing the variance explained by each principal component. Three components were retained."
+  },
+  {
+    "objectID": "projects/survey-machine-learning.html#cluster-analysis",
+    "href": "projects/survey-machine-learning.html#cluster-analysis",
+    "title": "Predicting Loneliness from Survey Data",
+    "section": "Cluster analysis",
+    "text": "Cluster analysis\n\n\n\nThree-cluster solution across the first two principal-component dimensions."
+  },
+  {
+    "objectID": "projects/survey-machine-learning.html#model-comparison",
+    "href": "projects/survey-machine-learning.html#model-comparison",
+    "title": "Predicting Loneliness from Survey Data",
+    "section": "Model comparison",
+    "text": "Model comparison\n\n\n\nModel\nAccuracy\nRecall\nCohen’s kappa\n\n\n\n\nRandom Forest\n72.4%\n21.2%\n0.209\n\n\nLogistic Regression\n71.7%\n27.8%\n0.229\n\n\nNaive Bayes\n68.9%\n38.8%\n0.228\n\n\n\nRandom Forest achieved the highest accuracy, but Naive Bayes identified a substantially larger proportion of respondents experiencing loneliness. Because missing lonely respondents was considered more serious than generating false positives, recall was prioritised when selecting and tuning the final model."
+  },
+  {
+    "objectID": "projects/ict-job-web-scraping.html",
+    "href": "projects/ict-job-web-scraping.html",
+    "title": "Web Scraping ICT Job Vacancies from Jobat",
+    "section": "",
+    "text": "Tools and skills: R · web scraping · rvest · HTTP requests · data cleaning · text analysis · data visualisation\n\n\n\n\n\n\nAt a glance\n\n\n\nThis project built a reusable and ethical web-scraping workflow in R to collect, clean, and compare vacancy information across several Jobat job categories.\n\n\n\nProject overview\nThis project used R to scrape and explore job vacancies published on the Belgian Jobat website. We first collected ICT vacancies, extracting job titles, locations, contract types, and salary information, then extended the same process to several other job categories and combined the results for analysis.\n\n\nResearch question\nWhat vacancy information could be collected reliably from Jobat, and what patterns appeared across job categories in job location, contract type, and salary information?\n\n\nData\nThe dataset was created by scraping publicly available vacancy listings from Jobat. Each observation represented one job advertisement and included available information such as the job title, category, location, contract type, and salary. ICT vacancies were collected first, followed by vacancies from additional job categories that were combined into one dataset for comparison.\n\n\nMethods\n\nSent HTTP requests to Jobat using a descriptive user-agent.\nParsed the returned HTML using rvest.\nIdentified the HTML elements containing individual vacancy listings.\nBuilt a reusable function to extract job titles, locations, contract types, and salary information.\nUsed regular expressions and the position of text elements to separate each variable.\nRecorded unavailable information as missing values.\nScraped multiple result pages and added a ten-second delay between requests.\nCombined the scraped job categories into one dataset for analysis and visualisation.\n\n\n\nKey findings\n\nThe scraper successfully converted semi-structured vacancy cards into a structured dataset containing job titles, locations, contract types, salaries, and job categories.\nSalary information was frequently unavailable, so preserving missing values as NA was important for preventing incorrect data from being assigned to another vacancy.\nPermanent contracts appeared frequently across the scraped listings.\nThe same scraping function could be reused across several job categories and multiple result pages.\nParsing each complete vacancy card before extracting individual fields produced more reliable results than scraping each variable separately.\n\n\n\nMy contribution\nI helped build and test the web scraper, cleaned and prepared the collected vacancy data, and analysed patterns across job categories. I also contributed to interpreting the results and writing the final report.\n\n\nLimitations\nThe results depended on the structure and content of the Jobat website at the time of collection. Changes to the website’s HTML could cause the scraper to stop working or extract fields incorrectly. Some vacancy details, especially salary information, were missing, and the scraped listings represented only the vacancies available during the collection period.\n\n\nFull project report\nView the original rendered report"
   }
 ]

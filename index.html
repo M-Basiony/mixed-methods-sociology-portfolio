@@ -139,10 +139,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="mixed-methods-sociology-portfolio" class="level1 hero">
-<h1>Mixed-Methods Sociology Portfolio</h1>
-<p>Hello, I’m <strong>Moustafa Basiony</strong>, a mixed-methods sociologist and MSc Sociology candidate at KU Leuven.</p>
-<p>I use quantitative, qualitative, and computational methods to study social inequality, migration, discrimination, intergroup relations, education, and wellbeing.</p>
+<section id="quantitative-sociology-mixed-methods-research" class="level1 hero">
+<h1>Quantitative Sociology &amp; Mixed-Methods Research</h1>
+<p>Hello, I’m <strong>Moustafa Basiony</strong>, a quantitative sociologist and mixed-methods researcher who recently completed an MSc in Sociology, Culture and Society at KU Leuven.</p>
+<p>My research focuses on <strong>discrimination, social inequality, migration, and intergroup relations</strong>. I use survey research, statistical modelling, and computational methods to study how social experiences and contexts shape attitudes, inequalities, and intergroup relations.</p>
 </section>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -154,12 +154,17 @@ Methods at a glance
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Survey research · regression analysis · machine learning · computational text analysis · web scraping</p>
+<p>Survey research · logistic &amp; ordinal regression · interaction &amp; moderation analysis · reproducible R workflows · computational text analysis · web scraping</p>
 </div>
 </div>
 <section id="featured-projects" class="level2">
 <h2 class="anchored" data-anchor-id="featured-projects">Featured projects</h2>
 <div class="projects-grid">
+<section id="masters-thesis-acceptance-of-ethnic-and-religious-discrimination-among-adolescents" class="level3 project-card">
+<h3 class="anchored" data-anchor-id="masters-thesis-acceptance-of-ethnic-and-religious-discrimination-among-adolescents">Master’s Thesis: Acceptance of Ethnic and Religious Discrimination among Adolescents</h3>
+<p>I conducted an independent quantitative study using survey data from 762 students in Dutch-language Belgian secondary schools to examine how intergroup contact, perceived and vicarious discrimination, and migrant background relate to acceptance of ethnic and religious discrimination.</p>
+<p><a href="./projects/thesis-discrimination.html">View project</a></p>
+</section>
 <section id="detecting-gender-based-hate-speech-on-reddit" class="level3 project-card">
 <h3 class="anchored" data-anchor-id="detecting-gender-based-hate-speech-on-reddit">Detecting Gender-Based Hate Speech on Reddit</h3>
 <p>I used R, text analysis, and supervised machine learning to classify hate speech in Reddit posts and examine patterns in the detected content.</p>
@@ -252,7 +257,7 @@ Methods at a glance
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/M-Basiony\.github\.io\/mixed-methods-sociology-portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
