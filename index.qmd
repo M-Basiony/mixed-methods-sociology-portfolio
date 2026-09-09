@@ -4,11 +4,11 @@ title: "Home"
 
 ::: {.hero}
 
-# Mixed-Methods Sociology Portfolio
+# Quantitative Sociology & Mixed-Methods Research
 
-Hello, I’m **Moustafa Basiony**, a mixed-methods sociologist and MSc Sociology candidate at KU Leuven.
+Hello, I’m **Moustafa Basiony**, a quantitative sociologist and mixed-methods researcher who recently completed an MSc in Sociology, Culture and Society at KU Leuven.
 
-I use quantitative, qualitative, and computational methods to study social inequality, migration, discrimination, intergroup relations, education, and wellbeing.
+My research focuses on **discrimination, social inequality, migration, and intergroup relations**. I use survey research, statistical modelling, and computational methods to study how social experiences and contexts shape attitudes, inequalities, and intergroup relations.
 
 :::
 
@@ -16,13 +16,23 @@ I use quantitative, qualitative, and computational methods to study social inequ
 
 ## Methods at a glance
 
-Survey research · regression analysis · machine learning · computational text analysis · web scraping
+Survey research · logistic & ordinal regression · interaction & moderation analysis · reproducible R workflows · computational text analysis · web scraping
 
 :::
 
 ## Featured projects
 
 :::: {.projects-grid}
+
+::: {.project-card}
+
+### Master’s Thesis: Acceptance of Ethnic and Religious Discrimination among Adolescents
+
+I conducted an independent quantitative study using survey data from 762 students in Dutch-language Belgian secondary schools to examine how intergroup contact, perceived and vicarious discrimination, and migrant background relate to acceptance of ethnic and religious discrimination.
+
+[View project](projects/thesis-discrimination.qmd)
+
+:::
 
 ::: {.project-card}
 

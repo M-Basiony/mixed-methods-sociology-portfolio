@@ -2,9 +2,19 @@
 title: "Projects"
 ---
 
-The projects below demonstrate how I use quantitative and computational approaches to investigate social and policy-relevant questions. Each page summarizes the research question, data, methods, findings, limitations, and my contribution.
+The projects below demonstrate how I use quantitative and computational approaches to investigate social inequality, discrimination, migration, and other policy-relevant questions. Each page summarizes the research question, data, methods, findings, limitations, and my contribution.
 
 :::: {.projects-grid}
+
+::: {.project-card}
+
+## Master’s Thesis: Ethnic and Religious Discrimination among Adolescents
+
+I conducted an independent quantitative study of adolescents in Dutch-language Belgian secondary schools, examining how intergroup contact, perceived and vicarious discrimination, and migrant background relate to acceptance of ethnic and religious discrimination.
+
+[View project](projects/thesis-discrimination.qmd)
+
+:::
 
 ::: {.project-card}
 

@@ -2,37 +2,58 @@
 title: "About"
 ---
 
+I am a **quantitative sociologist and mixed-methods researcher** who recently completed an MSc in Sociology, Culture and Society at KU Leuven. My research focuses on **discrimination, social inequality, migration, and intergroup relations**, with particular interest in how social experiences and institutional contexts shape attitudes and unequal outcomes.
 
-I am a mixed-methods sociologist and MSc Sociology candidate at KU Leuven. My work combines quantitative, qualitative, and computational approaches to study social inequality, migration, intergroup relations, discrimination, education, and adolescent wellbeing.
-
-I am particularly interested in using survey research and statistical modelling to investigate socially and policy-relevant questions. My experience includes regression analysis, machine learning, text analysis, and web scraping
+My work combines survey research and statistical modelling with computational and qualitative approaches. In my master’s thesis, I used logistic and ordinal regression, interaction analysis, model diagnostics, and sensitivity analyses to examine adolescents’ acceptance of ethnic and religious discrimination. My other projects have involved machine learning, computational text analysis, clustering, and web scraping.
 
 ## Research interests
 
-- Migration and intergroup relations
-- Inter-minority relations
-- Intergroup contact and discrimination
-- Social inequality
-- Adolescent wellbeing
+- Discrimination and social inequality
+- Intergroup contact and relations
+- Migration and migrant incorporation
+- Attitudes, norms, and perceptions of fairness
 - Quantitative and mixed-methods research
 
 ## Methods and technical skills
 
-<p><strong>Research methods</strong></p>
+<p><strong>Applied quantitative methods</strong></p>
 
 <div class="skill-tags">
   <span>Survey research</span>
+  <span>Binary logistic regression</span>
+  <span>Ordinal regression</span>
+  <span>Interaction & moderation analysis</span>
+  <span>Model comparison</span>
+  <span>Model diagnostics</span>
+  <span>Sensitivity analysis</span>
+  <span>Missing-data assessment</span>
+  <span>Principal component analysis</span>
+  <span>Clustering</span>
+  <span>Supervised machine learning</span>
+  <span>Model evaluation</span>
+</div>
+
+<p><strong>Computational and qualitative methods</strong></p>
+
+<div class="skill-tags">
+  <span>Reproducible R workflows</span>
+  <span>Computational text analysis</span>
+  <span>Topic modelling</span>
+  <span>Sentiment analysis</span>
+  <span>Web scraping</span>
+  <span>Regular expressions</span>
   <span>Qualitative research</span>
   <span>Mixed-methods research design</span>
-  <span>Regression analysis</span>
-  <span>Machine learning</span>
-  <span>Computational text analysis</span>
 </div>
+
+<p><strong>Additional methodological training</strong></p>
+
+Coursework has included **multilevel modelling, regression discontinuity designs, difference-in-differences, and experimental methods and design**. I have also developed broader familiarity with **structural equation modelling and Bayesian statistics** through self-study.
 
 <p><strong>Software</strong></p>
 
 <div class="skill-tags">
-  <span>R</span>
+  <span>R (primary)</span>
   <span>Stata</span>
   <span>SPSS</span>
   <span>Python</span>
@@ -51,9 +72,11 @@ I am particularly interested in using survey research and statistical modelling 
 ## Education
 
 **MSc Sociology, Culture and Society**  
-KU Leuven, expected September 2026
+KU Leuven, 2026
 
-My master’s thesis examines intergroup contact, perceived discrimination, and the acceptance of discrimination among adolescents.
+My master’s thesis, *Acceptance of Ethnic and Religious Discrimination among Adolescents*, examined how intergroup contact, perceived and vicarious discrimination, and migrant background relate to adolescents’ acceptance of ethnic and religious discrimination.
+
+[View thesis project](projects/thesis-discrimination.qmd)
 
 **BA Sociology, Minor in Cognitive Science**  
 Rutgers University–New Brunswick, 2024  
@@ -61,22 +84,22 @@ GPA: 4.0, Summa Cum Laude
 
 ## Research experience
 
-**Aresty Research Assistant, Rutgers University New-Brunswick, NJ, USA**  
+**Aresty Research Assistant, Rutgers University–New Brunswick, NJ, USA**  
 September 2023 to May 2024
 
-I designed and carried out independent research projects, conducted statistical analysis using Stata and SPSS, completed literature reviews, and contributed to academic papers and research reports.
+I contributed to collaborative research on social and behavioural outcomes among children and adolescents, conducting statistical analysis using Stata and SPSS, reviewing literature, interpreting findings, and contributing to research reports and academic outputs.
 
 **Editorial Assistant Intern, Rutgers University Press, NJ, USA**  
 September 2023 to January 2024
 
-I proofread manuscripts, supported editorial workflows, and coordinated materials between authors, editors, and production teams.
+I proofread academic manuscripts and supported editorial and production workflows involving authors, editors, and production staff.
 
 ## Current manuscripts
 
-**Manuscripts in preparation for submission in 2026**
+**Manuscripts in preparation**
 
-- *The Sounds From Under the Stairs: Mahraganat, Class, and Cultural Legitimacy.*
 - *Acceptance of Ethnic and Religious Discrimination among Belgian Adolescents: The Role of Intergroup Contact, Migrant Background, and Discrimination Experiences.*
+- *The Sounds From Under the Stairs: Mahraganat, Class, and Cultural Legitimacy.*
 
 ## Contact
 

@@ -8,6 +8,7 @@ project:
     - projects/survey-machine-learning.qmd
     - projects/climate-text-analysis.qmd
     - projects/ict-job-web-scraping.qmd
+    - projects/thesis-discrimination.qmd
 
 website:
   title: "Moustafa Basiony"
